@@ -7,6 +7,7 @@ const imageSchema = mongoose.Schema({
     type: String,
     require: true
   },
+  itemId : { type: mongoose.Schema.ObjectId, ref: 'Item' }
 });
 const Image = mongoose.model('Image', imageSchema);
 

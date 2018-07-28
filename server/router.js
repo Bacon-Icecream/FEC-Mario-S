@@ -15,4 +15,7 @@ router.route('/customer-reviews/images')
 .get(controller.images.get)
 .post(controller.images.post);
 
+router.route('/customer-reviews/imagesItem')
+.get(controller.imagesItem.get);
+
 module.exports = router;

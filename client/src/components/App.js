@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      itemId: '5b56129c6c1182305c88898f'
+      itemId: '5b5b7c28f328e361bcaad1be'
     }
 
     axios.get('/api/customer-reviews/items', {

@@ -43,7 +43,8 @@ for(let i = 1; i <= itemAmount; i++) {
                 const imageAmount = Math.floor(Math.random() * 3);
                 for(let im = 1; im <= imageAmount; im++) {
                   new Image({
-                    imageUrl: faker.internet.avatar()
+                    imageUrl: faker.internet.avatar(),
+                    itemId: item.id
                   })
                   .save((errorImage, image) => {
                     if(errorImage) {

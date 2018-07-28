@@ -99,6 +99,18 @@ const controller = {
         res.status(201).send(image._id);
       });
     }
+  },
+
+  imagesItem: {
+    get: (req, res) => {
+      const { itemId } = req.query;
+      Image.find({
+        itemId
+      }, (error, images) => {
+        if(error) console.log('Error getting the image');
+        res.status(200).send(images);
+      })
+    }
   }
 }
 
