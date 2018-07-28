@@ -16,6 +16,10 @@ const reviewSchema = mongoose.Schema({
     type: String,
     require: true
   },
+  avatar: {
+    type: String,
+    require: true
+  },
   createdDate: {
     type: Date,
     require: true

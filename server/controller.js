@@ -84,8 +84,7 @@ const controller = {
       const { itemId } = req.query;
       Review.find({
         itemId
-      },
-      [],
+      }, [],
       {
         sort:{
           createdDate: -1

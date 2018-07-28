@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import style from '../styles/App.css';
 import Image from './Image';
 import Review from './Review';
@@ -10,18 +9,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      itemId: '5b5cbff2b8f6db61a09cb198'
+      itemId: '5b5ce1ff7236c92ec094e98d'
     }
-
-    /*axios.get('/api/customer-reviews/items', {
-      params: {
-        itemId: this.state.itemId
-      }
-    })
-    .then((item) => {
-      console.log(item.data);
-    })
-    .catch(error => console.error('error fetching item:', error));*/
   }
 
   render() {

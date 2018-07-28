@@ -20,6 +20,7 @@ for(let i = 1; i <= itemAmount; i++) {
       for(let r = 1; r <= reviewAmount; r++) {
         new Review({
           username: faker.internet.userName(),
+          avatar: faker.internet.avatar(),
           createdDate: faker.date.past(),
           message: faker.lorem.text(),
           stars: Math.floor(Math.random() * 6),

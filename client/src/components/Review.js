@@ -17,11 +17,9 @@ class Review extends Component {
       }
     })
     .then((item) => {
-      console.log(item.data);
       this.setState({
-        images: item.data.slice(0, 10)
+        reviews: item.data.slice(0, 10)
       });
-      console.log(this.state.images)
     })
     .catch(error => console.error('error fetching item:', error));
   }
@@ -30,8 +28,12 @@ class Review extends Component {
     return (
       <div className={style.recentReviews}>
         <div className={style.recentTitle}>Most recent customer reviews</div>
-
-        <ReviewEntry />
+        {this.state.reviews.map((review, index) => (
+          <ReviewEntry
+            review={review}
+            key={review+index}
+          />
+        ))}
       </div>
     );
   }
