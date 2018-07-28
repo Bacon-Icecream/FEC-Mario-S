@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import style from '../styles/App.css'
-import ReactStars from 'react-stars'
+import style from '../styles/App.css';
+import Image from './Image';
+import Review from './Review';
+import Search from './Search';
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +34,10 @@ class App extends Component {
               <div className={style.topCostumer}>Top customer reviews</div>
             </div>
             <div className={style.mostRecent}>
-              <div className={style.customerImages}>
+            <Image />
+            <Review />
+            <Search />
+              {/* <div className={style.customerImages}>
                 <div className={style.imagesTitle}>Customer images</div>
                 <div className={style.imageContainer}>
                   <img className={style.imageDisplay} src="https://s3.amazonaws.com/uifaces/faces/twitter/panghal0/128.jpg" alt="Avatar"/>
@@ -43,8 +48,8 @@ class App extends Component {
                 <div>
                   <a className={style.imagesLink}>See all customer images</a>
                 </div>
-              </div>
-              <div className={style.recentReviews}>
+              </div> */}
+              {/* <div className={style.recentReviews}>
                 <div className={style.recentTitle}>Most recent customer reviews</div>
                 <div className={style.review}>
                   <div className={style.avatarHolder}>
@@ -68,14 +73,14 @@ class App extends Component {
                     <a className={style.reviewTime}>Published 1 hour ago</a>
                   </div>
                 </div>
-              </div>
-              <div className={style.search}>
+              </div> */}
+              {/* <div className={style.search}>
                 <div className={style.searchTitle}>Search customer reviews</div>
                 <form>
                   <input className={style.searchReviews} type="text" name="search"/>
                   <button className={style.searchButton} type="submit">Search</button>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
         <hr/>
