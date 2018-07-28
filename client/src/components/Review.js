@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from '../styles/App.css';
+import style from '../styles/Review.css';
 import ReactStars from 'react-stars';
 
 class Review extends Component {
