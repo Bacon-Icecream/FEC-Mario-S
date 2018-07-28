@@ -55,53 +55,6 @@
   padding: 20px 0;
   font-size: 30px;
 } */
-.imagesTitle {
-  font-weight: bolder;
-  font-size: 15px;
-  margin-bottom: 15px;
-}
-
-.customerImages { 
-  grid-area: images; 
-  /* border: 1px solid orange; */
-  /* height: 100%; */
-  /* max-width: 100%;
-  max-height: 100%; */
-}
-
-.imageContainer {
-  /* border: 1px solid blue; */
-  display: flex;
-  flex: 2 2 auto;
-  align-items: flex-start;
-  /* max-width: 100%;
-  max-height: 100%; */
-  overflow: hidden;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.imageDisplay {
-   /* border: 1px solid yellow; */
-   display: flex;
-   max-width: 100%;
-   max-height: 100%;
-   margin-right: 5px;
-   flex: 2 2 auto;
-   cursor: pointer;
-}
-
-.imagesLink {
-  font-size: 12px;
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 .recentReviews { 
   grid-area: recent;
@@ -158,34 +111,6 @@
   /* border: 1px solid blueviolet; */
 }
 
-.search { 
-  grid-area: search; 
-  /* border: 1px solid green; */
-
-}
-
-.searchReviews {
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  font-size: 12px;
-  background-color: white;
-  background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-position: 8px 8px;
-  background-size: 8%;
-  background-repeat: no-repeat;
-  padding: 3px 3px 3px 30px;
-  width: 165px;
-  height: 31px;
-  font: 400 13.3333px Arial;
-}
-
-.searchReviews:focus {
-  box-shadow: 0 0 3px 2px rgba(228,121,17,.5);  
-  border-color: #e77600;
-  outline: none !important;
-}
-
 .reviewText{
   font-size: 13px;
   overflow: hidden;
@@ -201,27 +126,4 @@
 
 .review {
   margin-bottom: 15px;
-}
-
-.searchTitle {
-  font-size: 13px;
-  font-weight: bolder;
-  margin-bottom: 5px;
-}
-
-.searchButton {
-  margin-left: 5px;
-  height: 31px;
-  margin-top: 1px;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: bolder;
-  color: white;
-  font: 400 13.3333px Arial;
-  cursor: pointer;
-  box-shadow: 0 1px 0 rgba(255,255,255,.15) inset;
-  background: #444C55;
-  border-color: #3d444c #2f353b #2c3137;
-  border-style: solid;
-  border-width: 1px;
 }
