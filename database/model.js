@@ -48,6 +48,7 @@ const reviewSchema = mongoose.Schema({
     type: Number,
     require: false
   },
+  itemId : { type: mongoose.Schema.ObjectId, ref: 'Item' },
   images: [{ type: mongoose.Schema.ObjectId, ref: 'Image'}]
 });
 const Review = mongoose.model('Review', reviewSchema);

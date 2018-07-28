@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      itemId: '5b5b7c28f328e361bcaad1be'
+      itemId: '5b5cb2175707572c0c4091ea'
     }
 
     axios.get('/api/customer-reviews/items', {
@@ -34,8 +34,8 @@ class App extends Component {
               <div className={style.topCostumer}>Top customer reviews</div>
             </div>
             <div className={style.mostRecent}>
-              <Image />
-              <Review />
+              <Image itemId={this.state.itemId}/>
+              <Review itemId={this.state.itemId}/>
               <Search />
             </div>
           </div>

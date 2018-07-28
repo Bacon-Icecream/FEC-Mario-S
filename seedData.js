@@ -27,7 +27,8 @@ for(let i = 1; i <= itemAmount; i++) {
           descriptionTag: 'Material',
           description: faker.commerce.productMaterial(),
           verifiedPurchase: faker.random.boolean(),
-          comment: Math.floor(Math.random() * 100)
+          comment: Math.floor(Math.random() * 100),
+          itemId: item.id
         })
         .save((errorReview, review) => {
           if(errorReview) {

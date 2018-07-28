@@ -11,6 +11,9 @@ router.route('/customer-reviews/reviews')
 .post(controller.reviews.post)
 .put(controller.reviews.put);
 
+router.route('/customer-reviews/reviewsItem')
+.get(controller.reviewsItem.get);
+
 router.route('/customer-reviews/images')
 .get(controller.images.get)
 .post(controller.images.post);

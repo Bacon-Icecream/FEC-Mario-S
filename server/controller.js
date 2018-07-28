@@ -79,6 +79,18 @@ const controller = {
     }
   },
 
+  reviewsItem: {
+    get: (req, res) => {
+      const { itemId } = req.query;
+      Image.find({
+        itemId
+      }, (error, images) => {
+        if(error) console.log('Error getting the image');
+        res.status(200).send(images);
+      })
+    }
+  },
+
   images: {
     get: (req, res) => {
       const { imagedId } = req.query;
