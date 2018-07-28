@@ -70,9 +70,10 @@ class App extends Component {
                 </div>
               </div>
               <div className={style.search}>
-                Search customer reviews
+                <div className={style.searchTitle}>Search customer reviews</div>
                 <form>
                   <input className={style.searchReviews} type="text" name="search"/>
+                  <button className={style.searchButton} type="submit">Search</button>
                 </form>
               </div>
             </div>
