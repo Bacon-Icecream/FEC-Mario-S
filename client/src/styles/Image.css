@@ -8,29 +8,6 @@
   margin-bottom: 15px;
 }
 
-.imageContainer {
-  display: flex;
-  flex: 2 2 auto;
-  align-items: flex-start;
-  overflow: hidden;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.imageDisplay {
-   display: flex;
-   max-width: 100%;
-   max-height: 100%;
-   margin-right: 5px;
-   flex: 2 2 auto;
-   cursor: pointer;
-}
-
 .imagesLink {
   font-size: 12px;
   color: blue;
