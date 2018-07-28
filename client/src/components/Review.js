@@ -13,11 +13,15 @@ class Review extends Component {
 
     axios.get('/api/customer-reviews/reviewsItem', {
       params: {
-        itemId: this.state.itemId
+        itemId: props.itemId
       }
     })
     .then((item) => {
       console.log(item.data);
+      this.setState({
+        images: item.data.slice(0, 10)
+      });
+      console.log(this.state.images)
     })
     .catch(error => console.error('error fetching item:', error));
   }
@@ -26,6 +30,7 @@ class Review extends Component {
     return (
       <div className={style.recentReviews}>
         <div className={style.recentTitle}>Most recent customer reviews</div>
+
         <ReviewEntry />
       </div>
     );

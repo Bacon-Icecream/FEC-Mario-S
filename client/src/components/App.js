@@ -10,10 +10,10 @@ class App extends Component {
     super(props);
 
     this.state = {
-      itemId: '5b5cb2175707572c0c4091ea'
+      itemId: '5b5cbff2b8f6db61a09cb198'
     }
 
-    axios.get('/api/customer-reviews/items', {
+    /*axios.get('/api/customer-reviews/items', {
       params: {
         itemId: this.state.itemId
       }
@@ -21,7 +21,7 @@ class App extends Component {
     .then((item) => {
       console.log(item.data);
     })
-    .catch(error => console.error('error fetching item:', error));
+    .catch(error => console.error('error fetching item:', error));*/
   }
 
   render() {

@@ -82,11 +82,17 @@ const controller = {
   reviewsItem: {
     get: (req, res) => {
       const { itemId } = req.query;
-      Image.find({
+      Review.find({
         itemId
-      }, (error, images) => {
-        if(error) console.log('Error getting the image');
-        res.status(200).send(images);
+      },
+      [],
+      {
+        sort:{
+          createdDate: -1
+        }
+      }, (error, reviews) => {
+        if(error) console.log('Error getting the reviews');
+        res.status(200).send(reviews);
       })
     }
   },
@@ -119,7 +125,7 @@ const controller = {
       Image.find({
         itemId
       }, (error, images) => {
-        if(error) console.log('Error getting the image');
+        if(error) console.log('Error getting the images');
         res.status(200).send(images);
       })
     }
