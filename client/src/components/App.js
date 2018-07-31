@@ -9,14 +9,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      itemId: '5b5ce1ff7236c92ec094e98d'
+      itemId: '5b60a2cf3bb9e40d34e87f36'
     }
   }
 
   render() {
     return (
       <div>
-        <hr/>
+        <hr className={style.line}/>
           <div className={style.gridContainer}>
             <div className={style.totalizer}>
               <div className={style.customerReviews}>Customer reviews</div>
@@ -28,7 +28,7 @@ class App extends Component {
               <Search />
             </div>
           </div>
-        <hr/>
+        <hr className={style.line}/>
       </div>
     );
   }
