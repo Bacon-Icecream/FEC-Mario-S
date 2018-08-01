@@ -35,6 +35,26 @@ const controller = {
       });
     }
   },
+
+  firstItem: {
+    get: (req, res) => {
+      const { itemId } = req.query;
+      console.log(itemId);
+      // Item.findById(itemId, (error, item) => {
+      //   if(error) console.log('Error getting the first item');
+      //   res.status(200).send(item);
+      // })
+      Item.countDocuments().exec(function (err, count) {
+        const random = Math.floor(Math.random() * count)
+      
+        Item.findOne().skip(random).exec(
+          function (err, result) {
+            // console.log(result) 
+            res.status(200).send(result);
+          })
+      })
+    }
+  },
   
   reviews: {
     get: (req, res) => {
@@ -82,17 +102,22 @@ const controller = {
   reviewsItem: {
     get: (req, res) => {
       const { itemId } = req.query;
-      Review.find({
-        itemId
-      }, [],
-      {
-        sort:{
-          createdDate: -1
-        }
-      }, (error, reviews) => {
-        if(error) console.log('Error getting the reviews');
-        res.status(200).send(reviews);
-      })
+      console.log(itemId)
+      if(itemId === '') {
+        res.status(200).send([]);
+      } else {
+        Review.find({
+          itemId
+        }, [],
+        {
+          sort:{
+            createdDate: -1
+          }
+        }, (error, reviews) => {
+          if(error) console.log('Error getting the reviews');
+          res.status(200).send(reviews);
+        })
+      }
     }
   },
 
@@ -121,12 +146,19 @@ const controller = {
   imagesItem: {
     get: (req, res) => {
       const { itemId } = req.query;
-      Image.find({
-        itemId
-      }, (error, images) => {
-        if(error) console.log('Error getting the images');
-        res.status(200).send(images);
-      })
+      // console.log(itemId);
+      if(itemId === '') {
+        res.status(200).send([]);
+      } else {
+        Image.find({
+          itemId
+        }, (error, images) => {
+          if(error) {
+            console.log('Error getting the images');
+          }
+          res.status(200).send(images);
+        })
+      }
     }
   }
 }

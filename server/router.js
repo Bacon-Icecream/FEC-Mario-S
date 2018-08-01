@@ -6,6 +6,9 @@ router.route('/customer-reviews/items')
 .post(controller.items.post)
 .put(controller.items.put);
 
+router.route('/customer-reviews/firstItem')
+.get(controller.firstItem.get);
+
 router.route('/customer-reviews/reviews')
 .get(controller.reviews.get)
 .post(controller.reviews.post)
